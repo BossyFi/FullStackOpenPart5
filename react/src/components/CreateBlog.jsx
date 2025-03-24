@@ -2,7 +2,7 @@ const CreateBlog = (props) => {
     return (
         <div>
             <h1>Create new</h1>
-            <form>
+            <form onSubmit={props.createBlog}>
                 <div>
                     Title: <input type="text" value={props.title} onChange={props.setTitle}/>
                 </div>
@@ -12,7 +12,7 @@ const CreateBlog = (props) => {
                 <div>
                     URL: <input type="text" value={props.url} onChange={props.setUrl}/>
                 </div>
-                <button type="submit" onClick={props.createBlog}>Create</button>
+                <button type="submit">Create</button>
             </form>
         </div>
     );

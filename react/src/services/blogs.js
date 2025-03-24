@@ -18,9 +18,19 @@ const login = async credentials => {
     return response.data
 }
 
+const like = async blog => {
+    const response = await axios.put(`${baseUrl}/${blog.id}`, blog)
+    return response.data
+}
+
 const create = async newBlog => {
     const response = await axios.post(baseUrl, newBlog)
     return response.data
 }
 
-export default {getAll, setToken, login, create}
+const deleteBlog = async blog => {
+    const response = await axios.delete(`${baseUrl}/${blog.id}`)
+    return response.data
+}
+
+export default {getAll, setToken, login, create, like, deleteBlog}
