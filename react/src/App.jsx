@@ -144,7 +144,6 @@ const App = () => {
             ) : (
                 <div>
                     <h2>Blogs</h2>
-                    <Togglable/>
                     <Togglable buttonLabel={"new note"} ref={blogFormRef}>
                         <CreateBlog title={blogTitle} setTitle={({target}) => setBlogTitle(target.value)}
                                     author={blogAuthor}

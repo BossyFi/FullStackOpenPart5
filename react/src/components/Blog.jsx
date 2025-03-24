@@ -1,5 +1,5 @@
 const Blog = ({blog, handleLike, handleRemove}) => (
-    <div>
+    <div className="blog">
         <p>{blog.title} {blog.author}</p>
         <p>{blog.url}</p>
         <p>{blog.likes}
